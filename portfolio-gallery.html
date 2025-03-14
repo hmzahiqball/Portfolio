@@ -25,13 +25,45 @@
     <link rel="stylesheet" href="common/css/plugins.css">
 
     <!-- Core Style Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="common/css/common_style.css">
     <link rel="stylesheet" href="common/css/inner_pages.css">
+
+    <style>
+        .gallery-image {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+        .modal-content {
+            background: transparent;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+        }
+        #galleryImages {
+            justify-content: center;
+        }
+    </style>
 
 </head>
 
 <body>
-
+    <!-- ==================== Modal ==================== -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Gallery</h5>
+                    <button type="button" class="btn-close" style="filter: invert(1);" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="galleryImages" class="d-flex flex-wrap gap-2 justify-content-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- ==================== Start Loading ==================== -->
@@ -223,7 +255,7 @@
                         </div>
                         <div class="row justify-content-between">
                             <div class="col-lg-7">
-                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.2s">
+                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.2s" onclick="openGallery('Alquran', 11)">
                                     <div class="img">
                                         <img src="common/imgs/gallery/Alquran.png" alt="">
                                         <div class="tags">
@@ -234,7 +266,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.4s">
+                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.4s" onclick="openGallery('InstalasiPeneranganPTSofren', 5)">
                                     <div class="img square fit-img">
                                         <img src="common/imgs/gallery/InstalasiPeneranganPTSofren.jpeg" alt="">
                                         <div class="tags">
@@ -247,7 +279,7 @@
                         </div>
                         <div class="row justify-content-between">
                             <div class="col-lg-4">
-                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.2s">
+                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.2s" onclick="openGallery('PengerjaanPanelKapasitorBank', 2)">
                                     <div class="img square fit-img">
                                         <img src="common/imgs/gallery/PengerjaanPanelKapasitorBank.jpeg" alt="">
                                         <div class="tags">
@@ -260,7 +292,7 @@
                             <div class="col-lg-7">
                                 <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.4s">
                                     <div class="img">
-                                        <img src="common/imgs/gallery/InstalasiPeneranganGeodipa.jpeg" alt="">
+                                        <img src="common/imgs/gallery/InstalasiPeneranganGeodipa.jpeg" alt="" onclick="openGallery('InstalasiPeneranganGeodipa', 11)">
                                         <div class="tags">
                                             <a href="#0">Listrik & Penerangan</a>
                                         </div>
@@ -282,22 +314,9 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.4s">
-                                    <div class="img square fit-img">
-                                        <img src="common/imgs/gallery/PenerapanSolarSystemHalmahera2.jpeg" alt="">
-                                        <div class="tags">
-                                            <a href="#0">Solar System</a>
-                                        </div>
-                                    </div>
-                                    <h6>Penerangan Solar Home System Halmahera</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-between">
-                            <div class="col-lg-4">
                                 <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.2s">
                                     <div class="img">
-                                        <img src="common/imgs/gallery/AccessPoint.jpeg" alt="">
+                                        <img src="common/imgs/gallery/AccessPoint.jpeg" alt="" onclick="openGallery('AccessPoint', 4)">
                                         <div class="tags">
                                             <a href="#0">Jaringan & Infrastruktur IT</a>
                                         </div>
@@ -305,47 +324,23 @@
                                     <h6>Pemasangan Access Point</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-7">
-                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.4s">
-                                    <div class="img square fit-img">
-                                        <img src="common/imgs/gallery/PemasanganPJUPerpus.jpeg" alt="">
-                                        <div class="tags">
-                                            <a href="#0">PJU Solar Panel</a>
-                                        </div>
-                                    </div>
-                                    <h6>Instalasi PJU Solar Panel Perpustakaan Bandung</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-between">
-                            <div class="col-lg-7">
-                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.2s">
-                                    <div class="img">
-                                        <img src="common/imgs/gallery/PemasanganCCTV.jpeg" alt="">
-                                        <div class="tags">
-                                            <a href="#0">CCTV & Keamanan</a>
-                                        </div>
-                                    </div>
-                                    <h6>Pemasangan CCTV Bandung</h6>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.4s">
-                                    <div class="img square fit-img">
-                                        <img src="common/imgs/gallery/PemasanganCCTV2.jpeg" alt="">
-                                        <div class="tags">
-                                            <a href="#0">CCTV & Keamanan</a>
-                                        </div>
-                                    </div>
-                                    <h6>Pemasangan CCTV Bandung</h6>
-                                </div>
-                            </div>
                         </div>
                         <div class="row justify-content-between">
                             <div class="col-lg-4">
+                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.4s">
+                                    <div class="img square fit-img">
+                                        <img src="common/imgs/gallery/PenerapanSolarSystemHalmahera1.jpg" alt="" onclick="openGallery('PenerapanSolarSystemHalmahera', 5)">
+                                        <div class="tags">
+                                            <a href="#0">Solar System</a>
+                                        </div>
+                                    </div>
+                                    <h6>Penerangan Solar Home System Halmahera</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
                                 <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.2s">
                                     <div class="img">
-                                        <img src="common/imgs/gallery/PenerapanSolarSystemHalmahera.jpeg" alt="">
+                                        <img src="common/imgs/gallery/PenerapanSolarSystemHalmahera.jpeg" alt="" onclick="openGallery('PenerapanSolarSystemHalmahera', 5)">
                                         <div class="tags">
                                             <a href="#0">Solar System</a>
                                         </div>
@@ -353,34 +348,23 @@
                                     <h6>Penerapan Solar Home System Halmahera</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-7">
-                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.4s">
-                                    <div class="img square fit-img">
-                                        <img src="common/imgs/gallery/InstalasiPeneranganGeodipa2.jpeg" alt="">
-                                        <div class="tags">
-                                            <a href="#0">Listrik & Penerangan</a>
-                                        </div>
-                                    </div>
-                                    <h6>Instalasi Penerangan Kantor Geodipa Patuha Bandung</h6>
-                                </div>
-                            </div>
                         </div>
                         <div class="row justify-content-between">
                             <div class="col-lg-7">
                                 <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.2s">
                                     <div class="img">
-                                        <img src="common/imgs/gallery/InstalasiPeneranganRumahMakan.jpeg" alt="">
+                                        <img src="common/imgs/gallery/PemasanganCCTV.jpeg" alt="" onclick="openGallery('PemasanganCCTV', 10)">
                                         <div class="tags">
-                                            <a href="#0">Listrik & Penerangan</a>
+                                            <a href="#0">CCTV & Keamanan</a>
                                         </div>
                                     </div>
-                                    <h6>Instalasi Penerangan Rumah Makan</h6>
+                                    <h6>Pemasangan CCTV Bandung</h6>
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.4s">
-                                    <div class="img square fit-img">
-                                        <img src="common/imgs/gallery/InstalasiPeneranganRumahMakan2.jpeg" alt="">
+                                <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.2s">
+                                    <div class="img">
+                                        <img src="common/imgs/gallery/InstalasiPeneranganRumahMakan.jpeg" alt="" onclick="openGallery('InstalasiPeneranganRumahMakan', 7)">
                                         <div class="tags">
                                             <a href="#0">Listrik & Penerangan</a>
                                         </div>
@@ -390,8 +374,6 @@
                             </div>
                         </div>
                         <div class="row justify-content-between">
-                            <div class="col-lg-7">
-                            </div>
                             <div class="col-lg-4">
                                 <div class="item mb-60 wow fadeInUp slow" data-wow-delay="0.4s">
                                     <div class="img square fit-img">
@@ -528,6 +510,25 @@
 
     <!-- custom scripts -->
     <script src="common/js/inner_pages.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openGallery(baseName, count) {
+            const galleryImages = document.getElementById("galleryImages");
+            galleryImages.innerHTML = "";
+
+            for (let i = 0; i < count; i++) {
+                const img = document.createElement("img");
+                img.src = `common/imgs/gallery/${baseName}${i + 1}.jpg`;
+                img.classList.add("img-thumbnail", "m-1");
+                img.style.width = "150px";
+                galleryImages.appendChild(img);
+            }
+
+            const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+            modal.show();
+        }
+    </script>
 
 </body>
 
