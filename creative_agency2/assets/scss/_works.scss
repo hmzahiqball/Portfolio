@@ -1,0 +1,56 @@
+/* --------------- Works --------------- */
+
+.works-ca{
+    background: #fff;
+    border-radius: 0 0 30px 30px;
+    position: relative;
+    z-index: 3;
+
+    .item{
+
+        .img{
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .tags{
+                position: absolute;
+                left: 15px;
+                bottom: 15px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .4s;
+
+                a{
+                    font-size: 14px;
+                    padding: 7px 15px;
+                    line-height: 1.5;
+                    border-radius: 30px;
+                    background: #fff;
+
+                    &:hover{
+                        background: $main-color;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        h6{
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        &:hover{
+
+            .img{
+
+                .tags{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

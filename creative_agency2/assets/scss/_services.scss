@@ -1,0 +1,114 @@
+/* --------------- Services --------------- */
+
+.marq-mp{
+
+    .main-marq{
+        overflow: hidden;
+        padding: 25px 0;
+    }
+
+    .color-bg{
+        background: $main-color;
+        transform: rotate(3deg);
+        margin-top: -30px;
+    }
+
+    .gray-bg{
+        background: #eee;
+        transform: rotate(-2deg);
+        position: relative;
+        z-index: 4;
+    }
+
+    .item{
+        padding: 0 60px !important;
+        position: relative;
+
+        &:after{
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        h5{
+            font-weight: 400;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+    }
+}
+
+.services-mp{
+
+    .sub-head{
+
+        &:after{
+            background: #fff !important;
+        }
+    }
+
+    .serv-title{
+
+        .tab-title{
+            opacity: .5;
+            transition: all .4s;
+
+            h2{
+                font-size: 120px;
+                line-height: 120px;
+                margin: 10px 0;
+            }
+
+            &.current{
+                opacity: 1;
+            }
+        }
+    }
+
+    .content{
+        position: relative;
+
+        .item{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transform: translateY(50px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .4s;
+
+            &:first-of-type{
+                position: static;
+            }
+
+            &.current{
+				transform: translateY(0);
+				opacity: 1;
+                visibility: visible;
+			}
+
+            .img{
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .cont{
+                margin-top: 30px;
+
+                span{
+                    display: block;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

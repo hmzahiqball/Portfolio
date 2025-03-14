@@ -1,0 +1,298 @@
+
+:root {
+    --bg-color: #f7f8f9;
+    --theme-color: #fff;
+    --main-color: #7FE85A;
+}
+
+$bg-color: var(--bg-color);
+$sub-color: var(--sub-color);
+$theme-color: var(--theme-color);
+$main-color: var(--main-color);
+$heading-color: var(--heading-color);
+$p-color: var(--p-color);
+$border-color: var(--border-color);
+$mobile-xs-screen: 480px;
+$tablet-sm-screen: 768px;
+$desk-md-screen: 992px;
+$desk-lg-screen: 1300px;
+
+
+
+// menu
+@import 'menu';
+
+// header
+@import 'header';
+
+// About
+@import 'about';
+
+// Works
+@import 'works';
+
+// Services
+@import 'services';
+
+// testimonials
+@import 'testimonials';
+
+// Awards
+@import 'awards';
+
+// Team
+@import 'team';
+
+// blogs
+@import 'blogs';
+
+// Clients
+@import 'clients';
+
+// Footer
+@import 'footer';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #1b1b1b;
+    background-color: $theme-color;
+}
+
+.container-xxl{
+    max-width: 1500px !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+    margin: 0;
+}
+
+h1{
+    font-size: 64px;
+    letter-spacing: -3px;
+}
+
+h2{
+    font-size: 48px;
+    letter-spacing: -3px;
+}
+
+h3{
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+h4{
+    font-size: 36px;
+    letter-spacing: -2px;
+}
+
+h5{
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+h6{
+    font-size: 24px;
+}
+
+.sub-color{
+    color: #494949;
+}
+
+.sub-head{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+p{
+    color: #494949;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sec-head{
+    text-wrap: pretty;
+
+    .sub-head{
+        position: relative;
+        padding-left: 25px;
+
+        &:after{
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 0;
+        }
+    }
+}
+
+.loader-wrap svg{
+    fill: #1d1d1d;
+}
+
+.butn{
+
+    &.butn-bord{
+        border: 1px solid rgba(0,0,0,.3);
+
+        &:hover{
+            background: $bg-color;
+            color: #fff;
+        }
+    }
+
+    &.butn-bg{
+        border: 1px solid $main-color;
+        background: $main-color;
+        color: #fff;
+
+        &:hover{
+            background: transparent;
+            color: inherit;
+        }
+    }
+}
+
+.icon.invert{
+
+    img{
+        filter: invert(1);
+    }
+}
+
+.butn{
+
+    .icon{
+        width: 18px;
+    }
+
+    &:hover{
+
+        .icon.invert{
+
+            img{
+                filter: invert(0);
+            }
+        }
+    }
+}
+
+
+.box-dark{
+    background: #151515;
+    color: #fff;
+    position: relative;
+    z-index: -1;
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: -50px;
+        bottom: -50px;
+        width: 100%;
+        background: #151515;
+    }
+
+    p{
+        color: #d1d1d1;
+    }
+
+    &.no-out{
+
+        &:after{
+            display: none;
+        }
+    }
+}
+
+/* ====================== [ Start Responsive ] ====================== */
+
+@media screen and (max-width: $desk-md-screen) {
+
+    .sec-head{
+
+        .sub-head{
+            margin-bottom: 15px;
+        }
+    }
+
+    .header-crv .mimg{
+        margin-top: -50px;
+    }
+
+    .intro-crv .exp h2{
+        margin-bottom: 0;
+        font-size: 40vw;
+    }
+
+    .team-crv .content .item{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: $tablet-sm-screen) {
+
+    .navbar {
+
+        .container{
+            padding: 5px 10px;
+        }
+    }
+
+    .header-crv .mimg{
+        margin-top: -15px;
+        height: 300px;
+    }
+
+    .intro-crv .exp h2{
+        font-size: 70vw;
+    }
+
+    .services-mp .serv-title .tab-title h2{
+        font-size: 65px;
+        line-height: 1.2;
+    }
+
+    .testimonials-ds .qoute-icon {
+
+        .text{
+            width: 180px;
+        }
+
+        .icon{
+            width: 80px;
+        }
+    }
+
+    .testimonials-ds .item{
+        
+        h4{
+            font-size: 25px;
+            letter-spacing: normal;
+        }
+    }
+}
+
+
