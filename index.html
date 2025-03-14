@@ -52,13 +52,9 @@
 <body>
     <!-- ==================== Modal ==================== -->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" >
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel">Gallery</h5>
-                    <button type="button" class="btn-close" style="filter: invert(1);" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+                <div class="modal-body" style="max-height: 70vh;">
                     <div id="galleryImages" class="d-flex flex-wrap gap-2 justify-content-center"></div>
                 </div>
             </div>
@@ -180,7 +176,7 @@
                         <a href="https://www.instagram.com/hmzahiqball" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="mailto:suyatmin20@gmail.com" onclick="event.preventDefault(); navigator.clipboard.writeText('suyatmin20@gmail.com'); alert('Email copied to clipboard');" >
+                        <a href="mailto:suyatmin209@gmail.com" onclick="event.preventDefault(); navigator.clipboard.writeText('suyatmin209@gmail.com'); alert('Email copied to clipboard');" >
                             <i class="fa-solid fa-envelope"></i>
                         </a>
                     </div>
@@ -188,7 +184,7 @@
                         <h5>Katapang, Cilampeni, <br> Kab,Bandung, Jawa Barat 40921</h5>
                     </div>
                     <div class="item mt-10">
-                        <h5><a href="#0">suyatmin20@gmail.com</a></h5>
+                        <h5><a href="#0">suyatmin209@gmail.com</a></h5>
                         <h5 class="underline"><a href="#0">+62 817 7547 4509</a></h5>
                     </div>
                 </div>
@@ -760,7 +756,7 @@
                                     <div class="col-md-6 d-flex justify-content-end justify-end">
                                         <div class="item">
                                             <span class="sub-color">inquiry</span>
-                                            <p>suyatmin20@gmail.com</p>
+                                            <p>suyatmin209@gmail.com</p>
                                             <a href="https://wa.me/6281775474509?text=Halo%20saya%20tertarik%20menggunakan%20layanan%20anda" target="_blank" rel="noopener noreferrer">
                                                 <p>+62 817 7547 4509</p>
                                             </a>
@@ -776,7 +772,7 @@
                                     <a href="https://www.instagram.com/hmzahiqball" target="_blank">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
-                                    <a href="mailto:suyatmin20@gmail.com" onclick="event.preventDefault(); navigator.clipboard.writeText('suyatmin20@gmail.com'); alert('Email copied to clipboard');" >
+                                    <a href="mailto:suyatmin209@gmail.com" onclick="event.preventDefault(); navigator.clipboard.writeText('suyatmin209@gmail.com'); alert('Email copied to clipboard');" >
                                         <i class="fa-solid fa-envelope"></i>
                                     </a>
                                 </div>
@@ -852,7 +848,7 @@
                 const img = document.createElement("img");
                 img.src = `common/imgs/gallery/${baseName}${i + 1}.jpg`;
                 img.classList.add("img-thumbnail", "m-1");
-                img.style.width = "150px";
+                img.style.width = "200px";
                 galleryImages.appendChild(img);
             }
 
