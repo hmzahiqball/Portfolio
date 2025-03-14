@@ -1,17 +1,15 @@
-[build]
-  publish = "creative_agency2"   # Arahkan ke folder creative_agency2 sebagai root
-
+# Redirect halaman-halaman khusus
 [[redirects]]
   from = "/about"
-  to = "/inner_page/about.html"
+  to = "/about.html"
   status = 200
 
 [[redirects]]
   from = "/contact"
-  to = "/inner_page/contact.html"
+  to = "/contact.html"
   status = 200
 
 [[redirects]]
   from = "/gallery"
-  to = "/inner_page/portfolio-gallery.html"
+  to = "/portfolio-gallery.html"
   status = 200

@@ -1,0 +1,38 @@
+/* --------------- footer --------------- */
+.footer-sa {
+  background: #1d1d1d;
+  color: #fff; }
+  .footer-sa p,
+  .footer-sa .sub-color {
+    color: #ccc; }
+  .footer-sa .logo {
+    width: 160px; }
+  .footer-sa .contact-info .item {
+    margin-bottom: 50px; }
+    .footer-sa .contact-info .item span {
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 10px; }
+  .footer-sa .contact-info .social-icon a {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    font-size: 14px;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s; }
+    .footer-sa .contact-info .social-icon a:hover {
+      border-color: #fff; }
+  .footer-sa .sub-footer .copy p {
+    font-size: 14px; }
+    .footer-sa .sub-footer .copy p a {
+      color: #fff; }
+  .footer-sa .sub-footer .links {
+    width: 100%; }
+    .footer-sa .sub-footer .links a {
+      font-size: 14px; }
+    .footer-sa .sub-footer .links .active {
+      color: #fff; }
