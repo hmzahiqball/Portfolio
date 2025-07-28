@@ -11,5 +11,5 @@
 
 [[redirects]]
   from = "/gallery"
-  to = "/portfolio-gallery.html"
+  to = "/gallery.html"
   status = 200
